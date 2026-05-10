@@ -369,3 +369,20 @@ May 10, 2026 2:55:08 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notif
 INFO: Unsupported notification method: $/setTrace
 May 10, 2026 4:41:08 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFO: Unsupported notification method: $/setTrace
+2026.05.10 19:02:51 INFO  Shutting down server
+2026.05.10 19:02:51 INFO  Memory monitor stopped
+2026.05.10 19:02:51 INFO  shutting down Metals
+2026.05.10 19:02:51 INFO  Shut down connection with build server.
+2026.05.10 19:02:51 INFO  Exiting server
+2026.05.10 19:05:17 INFO  Started: Metals version 1.6.7 in folders 'C:\Parson' for client Visual Studio Code 1.119.0.
+2026.05.10 19:05:17 INFO  time: initialize in 0.2s
+2026.05.10 19:05:17 INFO  Memory monitor started
+2026.05.10 19:05:22 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.05.10 19:05:25 INFO  Attempting to connect to the build server...
+2026.05.10 19:05:26 INFO  Running BSP server List(C:\Users\Asus\AppData\Local\Coursier\data\bin\.scala-cli.aux.exe, bsp, --json-options, C:\Parson\.scala-build\ide-options-v2.json, --json-launcher-options, C:\Parson\.scala-build\ide-launcher-options.json, --envs-file, C:\Parson\.scala-build\ide-envs.json, C:\Parson)
+2026.05.10 19:05:27 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Parson\.metals\bsp.trace.json or C:\Users\Asus\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2026.05.10 19:05:56 INFO  time: Connected to build server in 30s
+2026.05.10 19:05:56 INFO  Connected to Build server: scala-cli v1.12.2
+2026.05.10 19:05:56 INFO  time: Imported build in 0.19s
+2026.05.10 19:06:01 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.05.10 19:06:01 INFO  time: indexed workspace in 6.32s

@@ -686,3 +686,11 @@ button:active {
             0 0 28px rgba(16,163,127,0.35)
         );
 }
+#history h3 {
+
+    color: darkgreen;
+
+    font-size: 28px;
+
+    margin-bottom: 18px;
+}

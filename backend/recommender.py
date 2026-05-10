@@ -13,7 +13,7 @@ import numpy as np
 import pandas as pd
 import faiss
 import joblib
-
+from sentence_transformers import SentenceTransformer
 from datetime import datetime
 from backend.llm_helper import (
     generate_book_explanations,
