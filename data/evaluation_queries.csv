@@ -1,0 +1,11 @@
+query,expected_intent,expected_book_form
+I want to understand space without equations,learn,learn
+Suggest Hindi books about life and growth,self_help,self_help
+Suggest fantasy adventure stories,story,story
+Recommend books on relationships,self_help,self_help
+Need encyclopedia of astronomy,reference,reference
+Explain machine learning basics,learn,learn
+Suggest motivational self improvement books,self_help,self_help
+I want a magic wizard novel,story,story
+Give me a handbook on biology,reference,reference
+Books about success mindset,self_help,self_help

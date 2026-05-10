@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- ============================================
+         PAGE METADATA
+         ============================================ -->
+
+    <!-- Title shown in browser tab -->
+    <title>PARSON Book Recommender</title>
+
+    <!-- Link external CSS file for styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ============================================
+     MAIN CONTAINER
+     Centers all content on the page
+     ============================================ -->
+
+<div class="container">
+
+    <!-- Application Heading -->
+    <div class="logo-container">
+
+    <img
+        src="assets/parson-logo.jpeg"
+        alt="PARSON Logo"
+        class="logo-image"
+    >
+
+    <h1>PARSON Book Recommender</h1>
+
+</div>
+
+    <!-- ============================================
+         USER INPUT AREA
+         User types their query here
+         ============================================ -->
+
+    <div class="search-container">
+          <div class="suggestions">
+
+               <span class="suggestion-chip">
+                    Dark fantasy kingdoms
+               </span>
+
+               <span class="suggestion-chip">
+                    AI dystopian futures
+               </span>
+
+                <span class="suggestion-chip">
+                    Emotional healing books
+               </span>
+
+               <span class="suggestion-chip">
+                    Space exploration
+               </span>
+
+               <span class="suggestion-chip">
+                    Crime and investigation
+               </span>
+
+          </div>
+          <textarea
+               id="queryInput"
+               placeholder="Describe your ideal book world..."></textarea>
+
+          <button id="searchBtn">
+               ✨ Discover
+          </button>
+
+     </div>
+
+    <!-- ============================================
+         LOADING MESSAGE
+         Appears while backend is processing
+         ============================================ -->
+
+    <div id="loading"></div>
+
+    <!-- ============================================
+         ERROR MESSAGE AREA
+         Shows network / validation errors
+         ============================================ -->
+
+    <div id="error"></div>
+
+    <!-- ============================================
+         RESULTS SECTION
+         Recommended books appear here
+         ============================================ -->
+    <div id="results-header"></div>
+    <div id="results"></div>
+
+    <!-- ============================================
+         SEARCH HISTORY PANEL
+         Shows last few user queries
+         ============================================ -->
+
+    <div id="history">
+
+        <h3>Previous Searches</h3>
+
+        <!-- Individual history items inserted here -->
+        <div id="historyList"></div>
+
+    </div>
+
+</div>
+
+<!-- ============================================
+     JAVASCRIPT FILE
+     Handles API calls and UI logic
+     ============================================ -->
+
+<script src="script.js"></script>
+
+</body>
+</html>

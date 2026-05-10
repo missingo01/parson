@@ -1,0 +1,20 @@
+{
+  "name": "scala-cli",
+  "argv": [
+    "C:\\Users\\Asus\\AppData\\Local\\Coursier\\data\\bin\\.scala-cli.aux.exe",
+    "bsp",
+    "--json-options",
+    "C:\\Parson\\.scala-build\\ide-options-v2.json",
+    "--json-launcher-options",
+    "C:\\Parson\\.scala-build\\ide-launcher-options.json",
+    "--envs-file",
+    "C:\\Parson\\.scala-build\\ide-envs.json",
+    "C:\\Parson"
+  ],
+  "version": "1.12.2",
+  "bspVersion": "2.1.1",
+  "languages": [
+    "scala",
+    "java"
+  ]
+}

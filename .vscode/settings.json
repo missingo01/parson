@@ -1,0 +1,6 @@
+{
+    "livePreview.defaultPreviewPath": "/frontend/index.html",
+    "files.watcherExclude": {
+        "**/target": true
+    }
+}

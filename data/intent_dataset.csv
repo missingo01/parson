@@ -1,0 +1,71 @@
+query,intent
+I want books about confidence,self_help
+Suggest books on self improvement,self_help
+Books about success mindset,self_help
+I feel lonely suggest books,self_help
+How to improve my life,self_help
+Recommend books on relationships,self_help
+Books on personal growth,self_help
+I want motivation books,self_help
+Suggest books on happiness,self_help
+Books about mental strength,self_help
+I want to learn machine learning,learn
+Teach me artificial intelligence basics,learn
+I want to understand physics,learn
+Explain neural networks,learn
+Books about astronomy,learn
+I want beginner programming books,learn
+Teach me data science,learn
+Books to understand space,learn
+Explain quantum mechanics simply,learn
+I want to learn calculus,learn
+Suggest fantasy novels,story
+Best adventure stories,story
+Magic wizard books,story
+Science fiction novels,story
+Romantic love story books,story
+Mystery thriller novels,story
+Horror story books,story
+Historical fiction novels,story
+Short story collections,story
+Epic fantasy books,story
+Give me encyclopedia of biology,reference
+Physics reference book,reference
+Programming handbook,reference
+Mathematics reference guide,reference
+Engineering handbook,reference
+Psychology encyclopedia,reference
+Computer science reference book,reference
+Biology handbook,reference
+Data science reference guide,reference
+Astronomy encyclopedia,reference
+Books about discipline,self_help
+Books about habits,self_help
+How to become successful,self_help
+Learn statistics basics,learn
+Learn deep learning,learn
+Best sci fi stories,story
+Classic novels,story
+Relationship advice books,self_help
+I want to understand intrapersonal skills ,self_help
+Books abou basics of money management,self_help
+I want fantasy stories,story
+Books about wizards and magic,story
+Wizard school novels,story
+Ninja adventure stories,story
+Epic dragon fantasy saga,story
+Sword and sorcery books,story
+Magic kingdom novels,story
+Dark fantasy stories,story
+High fantasy adventure books,story
+Books about magical battles,story
+Wizard hero story,story
+Ninja warrior novel,story
+Fantasy action adventure,story
+Magic and monsters story,story
+Heroic fantasy quest,story
+Epic fantasy novels,story
+Adventure fantasy books,story
+Fantasy world building novels,story
+Wizard and dragon stories,story
+Mythical creature fantasy,story
