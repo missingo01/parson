@@ -8,13 +8,13 @@ This script:
 4. Returns recommendations with basic explanations
 """
 import math
+import os
 import numpy as np
 import pandas as pd
 import faiss
 import joblib
 
 from datetime import datetime
-from sentence_transformers import SentenceTransformer
 from backend.llm_helper import (
     generate_book_explanations,
     generate_fallback_response
@@ -63,12 +63,30 @@ def sanitize_json(obj):
     return obj
 # ------------------------------ 
 INTENT_MODEL_PATH = "models/intent_classifier.pkl"
-intent_pipeline = joblib.load(INTENT_MODEL_PATH)
+intent_pipeline = None
 
 # -------------------------------
 # EMBEDDING MODEL
 # -------------------------------
-EMBEDDING_MODEL = SentenceTransformer("all-MiniLM-L6-v2")
+EMBEDDING_MODEL = None
+def get_intent_pipeline():
+    global intent_pipeline
+
+    if intent_pipeline is None:
+        intent_pipeline = joblib.load(INTENT_MODEL_PATH)
+
+    return intent_pipeline
+
+
+def get_embedding_model():
+    global EMBEDDING_MODEL
+
+    if EMBEDDING_MODEL is None:
+        
+
+        EMBEDDING_MODEL = SentenceTransformer("all-MiniLM-L6-v2")
+
+    return EMBEDDING_MODEL
 # -------------------------------
 # Explainability configuration
 # -------------------------------
@@ -121,7 +139,8 @@ def log_decision_trace(query, book_title, explanation):
         "intent_adjustment": explanation.get("intent_adjustment"),
         "final_score": explanation.get("final_score")
     }
-
+    import os
+    os.makedirs("logs", exist_ok=True)
     with open("logs/decision_traces.jsonl", "a", encoding="utf-8") as f:
         f.write(json.dumps(record) + "\n")
 
@@ -177,9 +196,9 @@ def detect_user_intents(user_query: str) -> dict:
     Predict user intent using trained ML pipeline.
     Returns confidence score for predicted intent(s).
     """
-
-    probabilities = intent_pipeline.predict_proba([user_query])[0]
-    labels = intent_pipeline.classes_
+    pipeline = get_intent_pipeline()
+    probabilities = pipeline.predict_proba([user_query])[0]
+    labels = pipeline.classes_
 
     intent_scores = {}
 
@@ -473,7 +492,7 @@ def recommend_books(user_query, top_k=10):
     # Load all required resources
     books_df = load_books_data()
     embeddings = load_embeddings()
-    embedding_model = EMBEDDING_MODEL
+    embedding_model = get_embedding_model()
 
 
     # Step 1: Detect language preference
