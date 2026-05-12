@@ -19,10 +19,16 @@ genai.configure(
     api_key=GEMINI_API_KEY
 )
 
-model = genai.GenerativeModel(
-    "gemini-2.5-flash"
-)
+model = None
+def get_gemini_model():
+    global model
 
+    if model is None:
+        model = genai.GenerativeModel(
+            "gemini-2.5-flash"
+        )
+
+    return model
 
 def generate_book_explanations(query, books):
 
@@ -69,9 +75,11 @@ OUTPUT FORMAT:
 
     try:
 
-        response = model.generate_content(prompt)
+        response = get_gemini_model().generate_content(prompt)
 
         text = response.text.strip()
+        print("\nGEMINI RAW RESPONSE:\n")
+        print(text)
 
         text = (
             text
@@ -79,7 +87,11 @@ OUTPUT FORMAT:
             .replace("```", "")
             .strip()
         )
+        start = text.find("{")
+        end = text.rfind("}") + 1
 
+        if start != -1 and end != -1:
+            text = text[start:end]
         parsed = json.loads(text)
 
         return parsed
@@ -126,7 +138,7 @@ RULES:
 
     try:
 
-        response = model.generate_content(
+        response = get_gemini_model().generate_content(
             prompt
         )
 

@@ -1,3 +1,6 @@
 .env
 __pycache__/
 .venv/
+.metals/
+.scala-build/
+.bsp/
