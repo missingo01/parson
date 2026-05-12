@@ -34,7 +34,8 @@ queryInput.addEventListener("keydown", function(event) {
    API ENDPOINT
 ============================ */
 
-const API_URL = "http://127.0.0.1:8000/recommend";
+const API_URL = "const API_URL = "https://parson-production.up.railway.app/recommend";
+";
 
 
 /* ============================
